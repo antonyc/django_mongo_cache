@@ -294,7 +294,6 @@ class MongoDBCache(BaseCache):
 
 
 class MongoFailSafeSessionCache(MongoDBCache):
-
     """
     Работает с монгой, не обращая внимания на ошибки монги.
     """
