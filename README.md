@@ -1,16 +1,16 @@
-# django_mongodb_cache
+# django_mongo_cache
 Django-based cache, using mongodb replicaset as a storage
 
 This is useful in distributed systems, which need cache, that is the same on all machines and somehow memcached is not a choice for them. Memcached can be a problem, cause it wipes out entities when memory limit is hit. Sometimes you want to be sure the cache value is always there where you put it, so mongodb is useful. 
 
-django_mongodb_cache takes benefit of MongoDB's TTL collections. 
+django_mongo_cache takes benefit of MongoDB's TTL collections. 
 
 ## Settings 
 
 Example configuration:
 ```
     'given_tokens': {  # name of cache
-        'BACKEND': 'django_mongodb_cache.MongoDBCache',
+        'BACKEND': 'django_mongo_cache.MongoDBCache',
         'LOCATION': 'mongodb://host1:27017,host2:27017/mydatabase',
         'collection': 'given_tokens',
     },
