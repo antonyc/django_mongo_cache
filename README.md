@@ -19,6 +19,8 @@ Example configuration:
 ```LOCATION```: should be a mongodb connection string, like 'mongodb://host1:27017,host2:27017/mydatabase' in common installations.
 ```collection``` - name of collection in mongodb. Required parameter.
 ```TIMEOUT```: timeout in seconds. Not required, has a default.
+``replica_set```: name of replicaset, required.
+
 
 ### OPTIONS
 
