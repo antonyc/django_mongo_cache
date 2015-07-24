@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='django_mongo_cache',
+    name='mongodb_cache',
     version='1.0',
     packages=find_packages(),
     include_package_data=True,
