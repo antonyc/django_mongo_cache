@@ -117,9 +117,12 @@ class MongoDBCache(BaseCache):
         database = uri_parser.parse_uri(location)['db']
         if not database:
             raise ImproperlyConfigured('Specify DB like that mongodb://hosts/database_name')
-        self._database_name = database
         self.mongodb = mongodb or MongoDBWrapper(
-            hosts=location, strategy=strategy, replica_set=options['replica_set'])
+            hosts=location,
+            strategy=strategy,
+            replica_set=options['replica_set'],
+            database_name=database
+        )
         self.logger = logging.getLogger('mongo_requests')
         super(MongoDBCache, self).__init__(params)
 
@@ -132,7 +135,7 @@ class MongoDBCache(BaseCache):
         """
         if self._collection is None:
             self._collection = LoggingCollection(
-                getattr(self.database, self.collection_name), logger
+                getattr(self.mongodb.database, self.collection_name), logger
             )
         return self._collection
 

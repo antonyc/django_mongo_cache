@@ -156,11 +156,12 @@ class MongoDBWrapper(object):
     hosts = None
     _connection = None
 
-    def __init__(self, hosts=None, replica_set=None, strategy='NEAREST'):
+    def __init__(self, database_name, hosts=None, replica_set=None, strategy='NEAREST'):
         assert strategy in ('NEAREST', 'PRIMARY')
         self.hosts = hosts
         self.strategy = strategy
         self.replica_set = replica_set
+        self.database_name = database_name
 
     @property
     def connection(self):
