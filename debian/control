@@ -1,0 +1,19 @@
+Source: python-django-tanker
+Section: utils
+Priority: extra
+Maintainer: Alex Koshelev <alexkoshelev@yandex-team.ru>
+Build-Depends: debhelper (>= 7), python-central
+Standards-Version: 3.7.2
+XS-Python-Version: >= 2.6
+Homepage: https://github.yandex-team.ru/common-python/python-django-tanker
+
+Package: python-django-tanker
+Architecture: all
+Depends:
+  python-central,
+  python (>= 2.6),
+  python-django,
+  python-httplib2,
+  python-lxml,
+Description: Django application for Tanker integration
+XB-Python-Version: ${python:Versions}
