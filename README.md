@@ -13,6 +13,9 @@ Example configuration:
         'BACKEND': 'mongodb_cache.MongoDBCache',
         'LOCATION': 'mongodb://host1:27017,host2:27017/mydatabase',
         'collection': 'given_tokens',
+        'OPTIONS': {
+            'replica_set': 'wiki',
+        }
     },
 ```
 
