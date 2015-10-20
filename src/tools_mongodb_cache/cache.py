@@ -114,7 +114,7 @@ class MongoDBCache(BaseCache):
         assert isinstance(self.collection_name, basestring)
         if not location.startswith('mongodb://'):
             raise ImproperlyConfigured('connection to mongo should start with mongodb://')
-        database = uri_parser.parse_uri(location)['db']
+        database = uri_parser.parse_uri(location)['database']
         if not database:
             raise ImproperlyConfigured('Specify DB like that mongodb://hosts/database_name')
         self.mongodb = mongodb or MongoDBWrapper(

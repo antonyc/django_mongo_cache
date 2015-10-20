@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 setup(
     name='tools_mongodb_cache',
-    version='1.4',
+    version='1.5',
     packages=find_packages(),
     include_package_data=True,
     author='Anton Chaporgin',
