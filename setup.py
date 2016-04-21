@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name='tools_mongodb_cache',
     version='1.5',
-    packages=find_packages(),
+    packages=find_packages('src'),
     include_package_data=True,
     author='Anton Chaporgin',
     author_email='chapson@yandex-team.ru',
